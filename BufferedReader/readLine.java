@@ -1,6 +1,6 @@
 /******************************************************************************
 
-Matrix multiplication......
+ReadLine and convert into Integer......
 
 
 Input:
