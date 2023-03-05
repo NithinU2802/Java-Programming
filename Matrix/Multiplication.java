@@ -30,6 +30,8 @@ Output:
 
 *******************************************************************************/
 
+import java.util.*;
+
 public class Main
 {
 	public static void main(String[] args) {
@@ -39,8 +41,25 @@ public class Main
 	for(int i=0;i<r1;i++)
 	for(int j=0;j<c1;j++) a[i][j]=x.nextInt();
 	int r2=x.nextInt(),c2=x.nextInt();
+	int[][] b=new int[r2][c2];
 	for(int i=0;i<r2;i++)
-	for(int j=0;j<c2;j++) a[i][j]=x.nextInt()
-	
+	for(int j=0;j<c2;j++) b[i][j]=x.nextInt();
+	if(c2!=r1){
+	    System.out.print("Dimension Error");
+	    return;
+	}
+	int[][] r=new int[r1][c2];
+	for(int i=0;i<r1;i++){
+	    for(int j=0;j<c2;j++){
+	        int s=0;
+	        for(int k=0;k<r2;k++) s+=(a[i][k]*b[k][j]);
+	        r[i][j]=s;
+	    }
+	}
+	System.out.println();
+	for(int i=0;i<r1;i++){
+	    for(int j=0;j<c2;j++) System.out.print(r[i][j]+" ");
+	    System.out.println();
+	}
 	}
 }
