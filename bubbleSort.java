@@ -1,6 +1,6 @@
 /******************************************************************************
 
-Bubble sort implementation...
+	Bubble sort implementation...
 
 Input:
 4
