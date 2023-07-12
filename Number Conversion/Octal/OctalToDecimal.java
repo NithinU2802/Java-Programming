@@ -1,12 +1,16 @@
+package Octal;
 /******************************************************************************
 
-    Program to convert binary to octal for the given input.
+    Program to convert Octal to Decimal for the given input.
     
-Input : 100100
-Output: 44
 
-Input : 1100001
-Output : 141
+input: 
+167
+
+Output:
+119
+
+ex: 7*1 + 6*8 + 1*64
     
 *******************************************************************************/
 import java.util.*;
@@ -16,23 +20,12 @@ public class Main
 	public static void main(String[] args) {
 	Scanner x=new Scanner(System.in);
 	int n=x.nextInt();
-	int b=1,c=0,sm=0;
-	String res="";
+	int s=0,res=0,oct=1;
 	while(n>0){
-	    if((n%10)==1) 
-	        sm+=b;
+	    res+=(n%10)*oct;
+	    oct*=8;
 	    n/=10;
-	    c++;
-	    if(c==3){
-	        res=String.valueOf(sm)+res;
-	        b=1;
-	        sm=0;
-	        c=0;   
-	    }else 
-	    b*=2;
 	}
-	if(sm!=0)
-	    res=String.valueOf(sm)+res;
 	System.out.println(res);
 	}
 }
