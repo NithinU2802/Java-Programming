@@ -1,0 +1,42 @@
+/******************************************************************************
+
+    Program to convert Octal to Binary for the given input.
+    
+
+input: 
+167
+
+Output:
+1110111
+
+1 - 001
+6 - 101 
+7 - 111 
+
+Note: we need to refer that each digit should be 0 to 7
+    
+*******************************************************************************/
+import java.util.*;
+
+public class Main
+{
+    public static String bin(int a){
+        String res="";
+        while(a>0){
+            res=(a%2)+res;
+            a/=2;
+        }
+        return res;
+    }
+    
+	public static void main(String[] args) {
+	Scanner x=new Scanner(System.in);
+	int n=x.nextInt();
+	String res="";
+	while(n>0){
+	    res=bin(n%10)+res;
+	    n/=10;
+	}
+	System.out.println(res);
+	}
+}
