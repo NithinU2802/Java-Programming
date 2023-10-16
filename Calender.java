@@ -1,7 +1,6 @@
 /******************************************************************************
 
     Print time and date using calender class available in java
-    
 Output:
 " Current Time and Date "
 
